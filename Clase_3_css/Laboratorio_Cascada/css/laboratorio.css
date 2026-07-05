@@ -1,0 +1,35 @@
+:root {
+    --color-principal: #1e40af;
+    --color-secundario: #f97316;
+    --color-texto: #ffffff;
+}
+
+.box {
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Esta regla gana sobre .box porque tiene mayor especificidad */
+.featured {
+    background-color: orange;
+}
+
+/* Esta regla gana sobre .featured porque es más específica */
+.box.featured {
+    background-color: purple;
+}
+
+.transparent {
+    opacity: 0.5;
+}
+
+.variable {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+}
+
+.alpha {
+    background-color: rgba(0, 0, 0, 0.5);
+}
